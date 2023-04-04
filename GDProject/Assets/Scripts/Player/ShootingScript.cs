@@ -10,7 +10,7 @@ public class ShootingScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") || Input.GetAxis("FireController") != 0)
         {
             isPressed = true;
         }
@@ -20,7 +20,7 @@ public class ShootingScript : MonoBehaviour
             StartCoroutine(gun.Shoot());
         }
 
-        if (Input.GetButtonUp("Fire1"))
+        if (Input.GetButtonUp("Fire1") || Input.GetAxis("FireController") == 0)
         {
             isPressed = false;
         }

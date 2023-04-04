@@ -1,4 +1,4 @@
-using Unity.VisualScripting;
+using System.Net;
 using UnityEngine;
 
 public class AimGunScript : MonoBehaviour
@@ -27,6 +27,19 @@ public class AimGunScript : MonoBehaviour
             inRight = true;
         }
 
+        if (Input.GetJoystickNames().Length > 0)
+        {
+            //Controller Control
+            if (Input.GetAxis("ControllerAimX") != 0.0 || Input.GetAxis("ControllerAimY") != 0.0)
+            {
+                float angleController = Mathf.Atan2(-Input.GetAxis("ControllerAimX"), Input.GetAxis("ControllerAimY")) * Mathf.Rad2Deg;
+                Quaternion rotationController = Quaternion.AngleAxis(angleController, Vector3.forward);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotationController, speed * Time.deltaTime);
+            }
+            return;
+        }
+
+        //Mouse Control
         Vector2 direction;
         direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
