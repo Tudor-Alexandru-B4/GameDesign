@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Net;
 using UnityEngine;
 
@@ -6,7 +7,8 @@ public class AimGunScript : MonoBehaviour
     public float speed = 15f;
     bool inRight = true;
     PlayerMovementScript player;
-    GameObject gun;
+    public GameObject gun;
+    public WeaponPicker weaponPicker;
 
     private void Start()
     {
@@ -16,7 +18,11 @@ public class AimGunScript : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(gameObject.transform.rotation.eulerAngles.z);
+        if (Input.GetButtonDown("ChangeWeapon"))
+        {
+            weaponPicker.TryToPickUp(gameObject.GetComponent<AimGunScript>());
+        }
+
         if(inRight && Mathf.Abs(WrapAngle(gameObject.transform.rotation.eulerAngles.z)) > 90)
         {
             gun.transform.Rotate(180, 0, 0);
@@ -27,7 +33,7 @@ public class AimGunScript : MonoBehaviour
             inRight = true;
         }
 
-        if (Input.GetJoystickNames().Length > 0)
+        if (Input.GetJoystickNames().Any(e => e.Length > 0))
         {
             //Controller Control
             if (Input.GetAxis("ControllerAimX") != 0.0 || Input.GetAxis("ControllerAimY") != 0.0)
