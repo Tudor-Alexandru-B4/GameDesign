@@ -1922,6 +1922,7 @@ GameObject:
   - component: {fileID: 1884470744}
   - component: {fileID: 1884470745}
   - component: {fileID: 1884470746}
+  - component: {fileID: 1884470747}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2082,9 +2083,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ability1: {fileID: 2758847120749975825, guid: 07c9c045fb4a6884ea869c292b83a789, type: 3}
-  abilityOnCooldown1: 0
   ability2: {fileID: 5341518224241084603, guid: 5bbff34aabf7546419712d16e65dbb90, type: 3}
-  abilityOnCooldown2: 0
+--- !u!114 &1884470747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884470739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b7cf01bb7d30340b4db081e3f5a432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  armor: 25
+  invincibilityTime: 0.5
+  isPlayer: 1
 --- !u!1001 &5284188724737509110
 PrefabInstance:
   m_ObjectHideFlags: 0
