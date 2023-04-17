@@ -1,18 +1,18 @@
-using NaughtyAttributes;
 using System.Collections;
 using UnityEngine;
 
-public class HealthSystem : MonoBehaviour, IHealthSystem
+public class HealthSystemPangolin : MonoBehaviour, IHealthSystem
 {
     public float health;
     public float armor;
     public float invincibilityTime;
+    public GameObject shell;
     bool isInvincible = false;
 
     // Update is called once per frame
     void Update()
     {
-        if(health <= 0.0)
+        if (health <= 0.0)
         {
             Destroy(gameObject);
         }
@@ -20,7 +20,7 @@ public class HealthSystem : MonoBehaviour, IHealthSystem
 
     public void TakeDamage(float damage)
     {
-        if (!isInvincible)
+        if (!isInvincible && shell.transform.childCount == 0)
         {
             health -= damage / (1 + armor / 100);
             StartCoroutine(Invincible());
