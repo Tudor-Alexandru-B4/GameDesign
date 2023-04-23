@@ -5,6 +5,7 @@ public class BasicWeaponScript : WeaponScript
 {
     public float fireRate;
     public float bulletSpeed;
+    public float bulletDamage;
     public Transform firePoint;
     public GameObject bullet;
 
@@ -20,7 +21,8 @@ public class BasicWeaponScript : WeaponScript
     {
         player.canShoot = false;
         GameObject bulletGameObject = Instantiate(bullet, firePoint.position, firePoint.rotation);
-        bulletGameObject.gameObject.GetComponent<Rigidbody2D>().velocity = transform.right * bulletSpeed;
+        bulletGameObject.GetComponent<BasicBulletScript>().damage = bulletDamage;
+        bulletGameObject.gameObject.GetComponent<Rigidbody2D>().AddForce(transform.right * bulletSpeed);
         yield return new WaitForSecondsRealtime(fireRate);
         player.canShoot = true;
     }

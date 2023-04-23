@@ -7,18 +7,19 @@ TagManager:
   - Ground
   - AnchorPoint
   - WeaponSpawner
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Bullet
+  - Enemy
+  - BulletReflect
+  - Checker
+  - EnemyAttack
   - 
   - 
   - 
