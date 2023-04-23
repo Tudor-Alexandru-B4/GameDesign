@@ -1,4 +1,3 @@
-using NaughtyAttributes;
 using System.Collections;
 using UnityEngine;
 
@@ -23,6 +22,7 @@ public class HealthSystem : MonoBehaviour, IHealthSystem
         if (!isInvincible)
         {
             health -= damage / (1 + armor / 100);
+            StartCoroutine(DamageUtils.ChangeColorOnGamage(gameObject));
             StartCoroutine(Invincible());
         }
     }
