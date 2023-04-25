@@ -33,6 +33,18 @@ public class HealthSystem : MonoBehaviour, IHealthSystem
         }
     }
 
+    public void Heal(float heal)
+    {
+        if(health + heal < maxHealth)
+        {
+            health += heal;
+        }
+        else
+        {
+            health = maxHealth;
+        }
+    }
+
     public void HealthEffect(float time, float newHealth)
     {
         StartCoroutine(HealthChangeTimed(time, newHealth));
