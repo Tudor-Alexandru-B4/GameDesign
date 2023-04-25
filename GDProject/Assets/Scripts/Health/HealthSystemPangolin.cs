@@ -22,6 +22,7 @@ public class HealthSystemPangolin : MonoBehaviour, IHealthSystem
     {
         if (!isInvincible && shell.transform.childCount == 0)
         {
+            Debug.Log(damage);
             health -= damage / (1 + armor / 100);
             StartCoroutine(DamageUtils.ChangeColorOnGamage(gameObject));
             StartCoroutine(Invincible());

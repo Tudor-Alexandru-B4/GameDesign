@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class PlayerMovementScript : MonoBehaviour
@@ -79,6 +81,19 @@ public class PlayerMovementScript : MonoBehaviour
         }
     }
 
+    public void SpeedEffect(float time, float newSpeed)
+    {
+        StartCoroutine(SpeedChangeTimed(time, newSpeed));
+    }
+
+    IEnumerator SpeedChangeTimed(float time, float newSpeed)
+    {
+        var basicSpeed = speed;
+        speed += newSpeed;
+        yield return new WaitForSeconds(time);
+        speed = basicSpeed;
+    }
+    
     void flip()
     {
         facingRight = !facingRight;
