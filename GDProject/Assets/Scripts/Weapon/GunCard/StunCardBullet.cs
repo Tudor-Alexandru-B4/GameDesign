@@ -21,6 +21,13 @@ public class StunCardBullet : BaseCardBullet
                 {
                     movementSystem.Stun(stunTime);
                 }
+
+                List<EnemyAttack> attackList;
+                DamageUtils.GetInterfaces<EnemyAttack>(out attackList, collision.gameObject);
+                foreach (EnemyAttack attackSystem in attackList)
+                {
+                    attackSystem.Stun(stunTime);
+                }
             }
             Destroy(gameObject);
         }

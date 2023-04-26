@@ -1,15 +1,15 @@
 using System.Collections;
 using UnityEngine;
 
-public class PangolinAttack : MonoBehaviour
+public class PangolinAttack : EnemyAttack
 {
     public GameObject tonguePrefab;
     public float cooldown;
     public float damage;
-    bool canAttack = true;
 
     public void TryAttack()
     {
+        Debug.Log(canAttack);
         if (canAttack)
         {
             StartCoroutine(Attack());
