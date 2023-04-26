@@ -161,4 +161,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxRotation: 360
-  rotationDegree: -2
+  rotationDegree: -3

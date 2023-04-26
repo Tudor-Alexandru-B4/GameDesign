@@ -15,7 +15,6 @@ public class EnemyMovement : MonoBehaviour
 
     public void Stun(float stunTime)
     {
-        Debug.Log("STUN");
         if (canMove)
         {
             gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
@@ -26,7 +25,6 @@ public class EnemyMovement : MonoBehaviour
     IEnumerator Stunned(float stunnTime)
     {
         canMove = false;
-        Debug.Log(canMove);
         yield return new WaitForSeconds(stunnTime);
         canMove = true;
     }
