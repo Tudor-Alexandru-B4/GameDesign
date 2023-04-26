@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class TimeStopRange : MonoBehaviour
 {
+    public Color normal;
+    public Color active;
     List<EnemyMovement> enemyMovementList = new List<EnemyMovement>();
     List<EnemyAttack> enemyAttackList = new List<EnemyAttack>();
     GameObject player;
@@ -90,6 +92,7 @@ public class TimeStopRange : MonoBehaviour
     public void TimeStop(float duration)
     {
         stoppingTime = true;
+        gameObject.GetComponent<SpriteRenderer>().color = active;
         gameObject.transform.parent = player.transform.parent;
         foreach (EnemyMovement movement in enemyMovementList)
         {
@@ -115,6 +118,7 @@ public class TimeStopRange : MonoBehaviour
             attack.canAttack = true;
         }
         gameObject.transform.parent = player.transform;
+        gameObject.GetComponent<SpriteRenderer>().color = normal;
         gameObject.transform.localPosition = Vector3.zero;
     }
 
