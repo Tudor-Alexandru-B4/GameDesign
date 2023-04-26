@@ -38,4 +38,10 @@ public class HummingbirdMovement : EnemyMovement
             }
         }
     }
+
+    override
+    public void StopCorutines()
+    {
+        StopAllCoroutines();
+    }
 }
