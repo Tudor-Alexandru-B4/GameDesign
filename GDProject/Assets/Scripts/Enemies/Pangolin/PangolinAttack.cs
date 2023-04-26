@@ -7,13 +7,20 @@ public class PangolinAttack : EnemyAttack
     public float cooldown;
     public float damage;
 
+    Coroutine attack = null;
+
     public void TryAttack()
     {
-        Debug.Log(canAttack);
         if (canAttack)
         {
-            StartCoroutine(Attack());
+            attack = StartCoroutine(Attack());
         }
+    }
+
+    override
+    public void StopCorutines()
+    {
+        StopAllCoroutines();
     }
 
     IEnumerator Attack()

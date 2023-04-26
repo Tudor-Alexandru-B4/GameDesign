@@ -5,6 +5,8 @@ public class EnemyAttack : MonoBehaviour
 {
     public bool canAttack = true;
 
+    public virtual void StopCorutines() { }
+
     public void Stun(float stunTime)
     {
         StartCoroutine(Stunned(stunTime));

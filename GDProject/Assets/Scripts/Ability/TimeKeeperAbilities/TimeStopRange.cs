@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +33,7 @@ public class TimeStopRange : MonoBehaviour
 
                 if(stoppingTime)
                 {
-                    movementSystem.canMove = false;
+                    StopMovement(movementSystem);
                 }
             }
 
@@ -47,7 +48,7 @@ public class TimeStopRange : MonoBehaviour
 
                 if (stoppingTime)
                 {
-                    attackSystem.canAttack = false;
+                    StopAttack(attackSystem);
                 }
             }
         }
@@ -68,7 +69,7 @@ public class TimeStopRange : MonoBehaviour
 
                 if (stoppingTime)
                 {
-                    movementSystem.canMove = true;
+                    StartMovement(movementSystem);
                 }
             }
 
@@ -83,7 +84,7 @@ public class TimeStopRange : MonoBehaviour
 
                 if (stoppingTime)
                 {
-                    attackSystem.canAttack = true;
+                    StartAttack(attackSystem);
                 }
             }
         }
@@ -96,12 +97,14 @@ public class TimeStopRange : MonoBehaviour
         gameObject.transform.parent = player.transform.parent;
         foreach (EnemyMovement movement in enemyMovementList)
         {
-            movement.canMove = false;
+            StopMovement(movement);
         }
+
         foreach (EnemyAttack attack in enemyAttackList)
         {
-            attack.canAttack = false;
+            StopAttack(attack);
         }
+        
         StartCoroutine(Detach(duration));
     }
 
@@ -111,15 +114,42 @@ public class TimeStopRange : MonoBehaviour
         stoppingTime = false;
         foreach (EnemyMovement movement in enemyMovementList)
         {
-            movement.canMove = true;
+            StartMovement(movement);
         }
         foreach (EnemyAttack attack in enemyAttackList)
         {
-            attack.canAttack = true;
+            StartAttack(attack);
         }
         gameObject.transform.parent = player.transform;
         gameObject.GetComponent<SpriteRenderer>().color = normal;
         gameObject.transform.localPosition = Vector3.zero;
+    }
+
+    void StopMovement(EnemyMovement movement)
+    {
+        movement.StopCorutines();
+        var movementRb = movement.gameObject.GetComponent<Rigidbody2D>();
+        if (movementRb != null)
+        {
+            movementRb.velocity = Vector3.zero;
+        }
+        movement.canMove = false;
+    }
+
+    void StopAttack(EnemyAttack attack)
+    {
+        attack.StopCorutines();
+        attack.canAttack = false;
+    }
+
+    void StartMovement(EnemyMovement movement)
+    {
+        movement.canMove = true;
+    }
+
+    void StartAttack(EnemyAttack attack)
+    {
+        attack.canAttack = true;
     }
 
 }

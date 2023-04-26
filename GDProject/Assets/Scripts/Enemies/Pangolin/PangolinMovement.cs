@@ -10,6 +10,12 @@ public class PangolinMovement : EnemyMovement
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
+    override
+    public void StopCorutines()
+    {
+        StopAllCoroutines();
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {

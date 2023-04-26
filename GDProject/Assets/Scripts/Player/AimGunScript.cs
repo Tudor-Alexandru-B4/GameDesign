@@ -22,11 +22,11 @@ public class AimGunScript : MonoBehaviour
             weaponPicker.TryToPickUp(gameObject.GetComponent<AimGunScript>());
         }
 
-        if(inRight && Mathf.Abs(WrapAngle(gameObject.transform.rotation.eulerAngles.z)) > 90)
+        if(inRight && Mathf.Abs(TransformUtils.WrapAngle(gameObject.transform.rotation.eulerAngles.z)) > 90)
         {
             gun.transform.Rotate(180, 0, 0);
             inRight = false;
-        }else if(!inRight && Mathf.Abs(WrapAngle(gameObject.transform.rotation.eulerAngles.z)) < 90)
+        }else if(!inRight && Mathf.Abs(TransformUtils.WrapAngle(gameObject.transform.rotation.eulerAngles.z)) < 90)
         {
             gun.transform.Rotate(180, 0, 0);
             inRight = true;
@@ -50,14 +50,5 @@ public class AimGunScript : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
-    }
-
-    private static float WrapAngle(float angle)
-    {
-        angle %= 360;
-        if (angle > 180)
-            return angle - 360;
-
-        return angle;
     }
 }

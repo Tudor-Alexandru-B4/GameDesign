@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
@@ -12,6 +13,8 @@ public class EnemyMovement : MonoBehaviour
         gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         gameObject.transform.Rotate(0, 180, 0);
     }
+
+    public virtual void StopCorutines() { }
 
     public void Stun(float stunTime)
     {
