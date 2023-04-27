@@ -8,12 +8,7 @@ public class CameraScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        retry:
         player = GameObject.FindGameObjectWithTag("Player");
-        if (player == null)
-        {
-            goto retry;
-        }
     }
 
     // Update is called once per frame

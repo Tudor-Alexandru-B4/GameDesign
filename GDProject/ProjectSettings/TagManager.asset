@@ -12,6 +12,7 @@ TagManager:
   - LeftBoundry
   - RightBoundry
   - Bullet
+  - Stopper
   layers:
   - Default
   - TransparentFX

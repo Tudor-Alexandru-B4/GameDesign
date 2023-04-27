@@ -27,7 +27,7 @@ public class PortalManager : MonoBehaviour
     {
         if(canTeleport)
         {
-            if (number == 1)
+            if (number == 2)
             {
                 obj.transform.position = portal1.teleportPoint.position;
             }

@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthSystemPlayer : MonoBehaviour, IHealthSystem
 {
@@ -19,7 +20,8 @@ public class HealthSystemPlayer : MonoBehaviour, IHealthSystem
     {
         if (health <= 0.0)
         {
-            Destroy(gameObject);
+            Destroy(GameObject.Find("PlayerManager"));
+            SceneManager.LoadScene("StartScene");
         }
     }
 
