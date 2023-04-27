@@ -14,6 +14,11 @@ public class CameraScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            return;
+        }
         var playerPos = player.transform.position;
         var newX = playerPos.x + (player.GetComponent<PlayerMovementScript>().facingRight ? -1 : 1) * offset;
         gameObject.transform.position = new Vector3(newX, playerPos.y, gameObject.transform.position.z);

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class DiceRoll : MonoBehaviour
 {
@@ -87,16 +86,16 @@ public class DiceRoll : MonoBehaviour
         switch(choosenNumber)
         {
             case 0:
-                player.GetComponent<HealthSystem>().HealthEffect(effectTimeHp, hpAdd);
+                player.GetComponent<HealthSystemPlayer>().HealthEffect(effectTimeHp, hpAdd);
                 break;
             case 1:
-                player.GetComponent<HealthSystem>().HealthEffect(effectTimeHp, -hpRemove);
+                player.GetComponent<HealthSystemPlayer>().HealthEffect(effectTimeHp, -hpRemove);
                 break;
             case 2:
-                player.GetComponent<HealthSystem>().ArmorEffect(effectTimeArmor, armorAdd);
+                player.GetComponent<HealthSystemPlayer>().ArmorEffect(effectTimeArmor, armorAdd);
                 break;
             case 3:
-                player.GetComponent<HealthSystem>().ArmorEffect(effectTimeArmor, -armorRemove);
+                player.GetComponent<HealthSystemPlayer>().ArmorEffect(effectTimeArmor, -armorRemove);
                 break;
             case 4:
                 player.GetComponent<PlayerMovementScript>().SpeedEffect(effectTimeSpeed, speedAdd);

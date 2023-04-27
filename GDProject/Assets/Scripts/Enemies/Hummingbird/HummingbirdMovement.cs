@@ -7,19 +7,24 @@ using static UnityEngine.GraphicsBuffer;
 public class HummingbirdMovement : EnemyMovement
 {
     public float rotationSpeed = 15f;
-    GameObject player;
+    GameObject player = null;
     Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            return;
+        }
+
         if(canMove)
         {
             Vector3 diff = player.transform.position - transform.position;

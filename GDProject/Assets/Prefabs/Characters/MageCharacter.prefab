@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 396292910055922092}
   - component: {fileID: 396292910055922093}
   - component: {fileID: 396292910055922094}
-  - component: {fileID: 396292910055922095}
+  - component: {fileID: 5400915664861471806}
   m_Layer: 3
   m_Name: MageCharacter
   m_TagString: Player
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ability1: {fileID: 5083902878959920410, guid: 4456e292e595e544cafe71276d1549d0, type: 3}
   ability2: {fileID: 1314956035549624255, guid: e4fc0e3abe9542747b5ef0665ede684a, type: 3}
---- !u!114 &396292910055922095
+--- !u!114 &5400915664861471806
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -305,7 +305,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 396292910055922087}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61b7cf01bb7d30340b4db081e3f5a432, type: 3}
+  m_Script: {fileID: 11500000, guid: 62c263392bf48064bb171598acacb37e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0

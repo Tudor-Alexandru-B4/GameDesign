@@ -14,7 +14,7 @@ public class HealCardBullet : BaseCardBullet
             foreach (IHealthSystem healthSystem in interfaceList)
             {
                 healthSystem.TakeDamage(damage);
-                GameObject.FindGameObjectWithTag("Player").GetComponent<HealthSystem>().Heal(heal);
+                GameObject.FindGameObjectWithTag("Player").GetComponent<HealthSystemPlayer>().Heal(heal);
             }
             Destroy(gameObject);
         }

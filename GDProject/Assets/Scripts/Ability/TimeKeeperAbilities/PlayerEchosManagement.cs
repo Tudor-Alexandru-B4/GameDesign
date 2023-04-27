@@ -9,7 +9,7 @@ public class PlayerEchosManagement : MonoBehaviour
     Queue<Vector3> echosTransform = new Queue<Vector3>();
     Queue<float> echosHealth = new Queue<float>();
     GameObject player = null;
-    HealthSystem healthSystem = null;
+    HealthSystemPlayer healthSystem = null;
     public bool isRecalling = false;
     bool waiting = false;
 
@@ -21,13 +21,21 @@ public class PlayerEchosManagement : MonoBehaviour
     private void Start()
     {
         echosPool = Instantiate(echoPrefab, new Vector3(0f, -50f, 0f), Quaternion.identity);
-        player = GameObject.FindGameObjectWithTag("Player");
-        healthSystem = player.GetComponent<HealthSystem>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            if(player != null )
+            {
+                healthSystem = player.GetComponent<HealthSystemPlayer>();
+            }
+            return;
+        }
+
         if (!isRecalling)
         {
             if (!waiting)

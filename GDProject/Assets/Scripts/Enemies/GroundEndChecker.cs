@@ -8,6 +8,7 @@ public class GroundEndChecker : MonoBehaviour
     {
         if (collision.tag == "Ground")
         {
+            movement.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             movement.Flip();
         }
     }
