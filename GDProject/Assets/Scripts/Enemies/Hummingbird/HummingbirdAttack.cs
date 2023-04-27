@@ -6,6 +6,7 @@ public class HummingbirdAttack : EnemyAttack
     public float attackSpeed;
     public float damage;
     public float stuckTime;
+    public float hazeTime = 1;
     Rigidbody2D rb;
     HummingbirdMovement movement;
 
@@ -37,7 +38,7 @@ public class HummingbirdAttack : EnemyAttack
     
     public IEnumerator SpawnHaze()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(hazeTime);
         canAttack = true;
     }
 }
