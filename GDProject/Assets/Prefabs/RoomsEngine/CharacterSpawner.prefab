@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5284188724087456813
+--- !u!1 &3177361158051874180
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,44 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5284188724087456811}
-  - component: {fileID: 5284188724087456810}
+  - component: {fileID: 3177361158051874234}
+  - component: {fileID: 3177361158051874181}
   m_Layer: 0
-  m_Name: WeaponSpawner
+  m_Name: CharacterSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5284188724087456811
+--- !u!4 &3177361158051874234
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5284188724087456813}
+  m_GameObject: {fileID: 3177361158051874180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.82, y: 2.74, z: 0.8069319}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalPosition: {x: -12.72, y: 3.39, z: -1.1048757}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5284188724087456810
+--- !u!114 &3177361158051874181
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5284188724087456813}
+  m_GameObject: {fileID: 3177361158051874180}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff1ddedaea05c6041ba507526c687369, type: 3}
+  m_Script: {fileID: 11500000, guid: ad45265fcfeefbd4989e6208c8e20214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponPrefabs:
-  - {fileID: 7967828961321085421, guid: fc711a5160fd34d4989a04dbc616f7ad, type: 3}
-  - {fileID: 5117504212306774858, guid: d215c8d88af5a804c9e1ec5e5b2455f2, type: 3}
-  rotationSpeed: 0.35
-  spawnChance: 15
+  characters:
+  - {fileID: 396292910055922087, guid: b0a2a0039c728fa409901ae00b104cfb, type: 3}
+  - {fileID: 5741992463925127187, guid: 3bab346d9ae6bfe47a580f40cfdeda87, type: 3}

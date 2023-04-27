@@ -52,10 +52,17 @@ public class LevelEnemyChecker : MonoBehaviour
 
     void TriggerEndLevel()
     {
-        int index = Random.Range(1, SceneManager.sceneCountInBuildSettings);
-        string path = SceneUtility.GetScenePathByBuildIndex(index);
-        string sceneName = path.Substring(0, path.Length - 6).Substring(path.LastIndexOf('/') + 1);
-        SceneManager.LoadScene(sceneName);
+        var weaponSpawner = GameObject.Find("WeaponSpawner").GetComponent<WeaponSpawner>();
+        if(weaponSpawner != null)
+        {
+            weaponSpawner.WeaponSpawn();
+        }
+
+        var exitDoor = GameObject.Find("ExitDoor").GetComponent<ExitDoor>();
+        if(exitDoor != null)
+        {
+            exitDoor.TriggerDoorOpen();
+        }
     }
 
     IEnumerator Wait()
