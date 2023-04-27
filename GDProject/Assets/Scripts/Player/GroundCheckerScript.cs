@@ -12,7 +12,7 @@ public class GroundCheckerScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Platform")
         {
             playerMovement.jumpCounter = playerMovement.maxJumpCounter;
             playerMovement.dashCounter = playerMovement.maxDashCounter;
