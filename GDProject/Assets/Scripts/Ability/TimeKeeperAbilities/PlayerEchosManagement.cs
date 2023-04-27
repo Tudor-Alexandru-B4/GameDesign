@@ -21,7 +21,12 @@ public class PlayerEchosManagement : MonoBehaviour
     private void Start()
     {
         echosPool = Instantiate(echoPrefab, new Vector3(0f, -50f, 0f), Quaternion.identity);
+        retry:
         player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null)
+        {
+            goto retry;
+        }
         healthSystem = player.GetComponent<HealthSystem>();
     }
 

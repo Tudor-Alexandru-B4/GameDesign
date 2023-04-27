@@ -86,8 +86,8 @@ GameObject:
   - component: {fileID: 5741992463925127192}
   - component: {fileID: 5741992463925127193}
   - component: {fileID: 5741992463925127194}
-  - component: {fileID: 5741992463925127195}
   - component: {fileID: 5741992463925127196}
+  - component: {fileID: 1615095182387915613}
   m_Layer: 3
   m_Name: TimeKeeperCharacter
   m_TagString: Player
@@ -250,22 +250,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ability1: {fileID: 8726986517058828303, guid: f2b37dada9c013541b3c1559314fc7a2, type: 3}
   ability2: {fileID: 6053994735689246797, guid: aa5fe2f95c2e35547b20e417a08d11e2, type: 3}
---- !u!114 &5741992463925127195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5741992463925127187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61b7cf01bb7d30340b4db081e3f5a432, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 0
-  health: 100
-  armor: 25
-  invincibilityTime: 0.5
 --- !u!114 &5741992463925127196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,6 +267,22 @@ MonoBehaviour:
   isRecalling: 0
   echosPool: {fileID: 5707000310908996527, guid: 9a2b0d03b55ea0b4ebd6df9e06fb043c, type: 3}
   echoPrefab: {fileID: 4180162211506079209, guid: 3579482f89ac87b47b531d69b88776d5, type: 3}
+--- !u!114 &1615095182387915613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5741992463925127187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c263392bf48064bb171598acacb37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  health: 100
+  armor: 25
+  invincibilityTime: 0.5
 --- !u!1 &5741992464288110025
 GameObject:
   m_ObjectHideFlags: 0
