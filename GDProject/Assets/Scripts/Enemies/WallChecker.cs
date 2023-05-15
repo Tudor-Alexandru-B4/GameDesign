@@ -6,7 +6,7 @@ public class WallChecker : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Ground" || collision.tag == "Stopper")
+        if(collision.tag == "Ground" || collision.tag == "Stopper" || collision.tag == "Platform")
         {
             movement.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             movement.Flip();
