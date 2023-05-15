@@ -48,6 +48,9 @@ MonoBehaviour:
   weaponPrefabs:
   - {fileID: 7967828961321085421, guid: fc711a5160fd34d4989a04dbc616f7ad, type: 3}
   - {fileID: 5117504212306774858, guid: d215c8d88af5a804c9e1ec5e5b2455f2, type: 3}
+  - {fileID: 5595334796368155896, guid: 8d2c8f2f15b9f894ab095fb7bbac4427, type: 3}
+  - {fileID: 8940818447610827869, guid: 7409f7af0fc9aaf459caab075b81f76a, type: 3}
+  - {fileID: 5665871397339382132, guid: 61d91475b4c49544c8afc03fdf8f930f, type: 3}
   rotationSpeed: 0.35
   spawnChance: 15
   spawnedWeapon: {fileID: 0}
