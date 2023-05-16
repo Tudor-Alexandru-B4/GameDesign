@@ -7,7 +7,7 @@ public class BasicBulletScript : MonoBehaviour
     public float damage = 0;
     public float despawnTime = 0.75f;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
@@ -21,7 +21,7 @@ public class BasicBulletScript : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public virtual void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Ground")
         {

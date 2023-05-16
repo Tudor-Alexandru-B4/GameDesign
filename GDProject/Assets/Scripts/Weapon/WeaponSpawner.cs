@@ -9,7 +9,7 @@ public class WeaponSpawner : MonoBehaviour
     public float rotationSpeed = 0.35f;
     public int spawnChance = 15;
     public GameObject spawnedWeapon = null;
-    bool bobbing = false;
+    public bool bobbing = false;
 
     private void Update()
     {
@@ -18,7 +18,10 @@ public class WeaponSpawner : MonoBehaviour
             return;
         }
 
-        gameObject.transform.Rotate(0, rotationSpeed, 0);
+        if(transform.childCount > 0)
+        {
+            gameObject.transform.GetChild(0).Rotate(0, rotationSpeed, 0);
+        }
 
     }
 
