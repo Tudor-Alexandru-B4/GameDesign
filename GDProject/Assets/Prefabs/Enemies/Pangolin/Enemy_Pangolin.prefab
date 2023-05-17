@@ -1,5 +1,53 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &160159177065967312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6654132143950113}
+  - component: {fileID: 2762965744529346912}
+  m_Layer: 18
+  m_Name: GroundCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6654132143950113
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160159177065967312}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1408278152861418412}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &2762965744529346912
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160159177065967312}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.04, y: -0.1267}
+  serializedVersion: 2
+  m_Radius: 0.01
 --- !u!1 &1408278152535604044
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,6 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b7cf01bb7d30340b4db081e3f5a432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 0
   health: 50
   armor: 75
   invincibilityTime: 0
@@ -236,7 +285,6 @@ GameObject:
   - component: {fileID: 1408278152861418414}
   - component: {fileID: 1408278152861418415}
   - component: {fileID: 1408278152861418411}
-  - component: {fileID: 1408278152861418410}
   - component: {fileID: 1408278152861418409}
   - component: {fileID: 1408278152861418408}
   m_Layer: 7
@@ -262,6 +310,7 @@ Transform:
   - {fileID: 1408278153415159271}
   - {fileID: 1408278152746330326}
   - {fileID: 1408278153191088611}
+  - {fileID: 6654132143950113}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -380,22 +429,6 @@ MonoBehaviour:
   armor: 0
   invincibilityTime: 0.3
   shell: {fileID: 1408278152541319213}
---- !u!58 &1408278152861418410
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1408278152861418416}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.04, y: -0.1267}
-  serializedVersion: 2
-  m_Radius: 0.01
 --- !u!114 &1408278152861418409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,6 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04183a9e20a30e64c96b239e35eebd51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canAttack: 1
   tonguePrefab: {fileID: 6394388517003462505, guid: 8d72c4056425709478fab839eea7161a, type: 3}
   cooldown: 5
   damage: 50
@@ -540,6 +574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b7cf01bb7d30340b4db081e3f5a432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 0
   health: 50
   armor: 75
   invincibilityTime: 0
@@ -657,6 +692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b7cf01bb7d30340b4db081e3f5a432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 0
   health: 50
   armor: 75
   invincibilityTime: 0
