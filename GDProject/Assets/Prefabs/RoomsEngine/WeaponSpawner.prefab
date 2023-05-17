@@ -52,6 +52,7 @@ MonoBehaviour:
   - {fileID: 8940818447610827869, guid: 7409f7af0fc9aaf459caab075b81f76a, type: 3}
   - {fileID: 5665871397339382132, guid: 61d91475b4c49544c8afc03fdf8f930f, type: 3}
   - {fileID: 8454188465954218777, guid: 51c0f2ed64857324aadc9bbc993ae56d, type: 3}
+  - {fileID: 2559993643366466850, guid: 844b1b9cffb91ab409a89e3379ac9388, type: 3}
   rotationSpeed: 0.35
   spawnChance: 15
   spawnedWeapon: {fileID: 0}
