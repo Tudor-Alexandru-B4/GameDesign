@@ -51,16 +51,16 @@ public class LevelEnemyChecker : MonoBehaviour
 
     void TriggerEndLevel()
     {
-        var weaponSpawner = GameObject.Find("WeaponSpawner").GetComponent<WeaponSpawner>();
+        var weaponSpawner = GameObject.Find("WeaponSpawner");
         if(weaponSpawner != null)
         {
-            weaponSpawner.WeaponSpawn();
+            weaponSpawner.GetComponent<WeaponSpawner>().WeaponSpawn();
         }
 
-        var exitDoor = GameObject.Find("ExitDoor").GetComponent<ExitDoor>();
+        var exitDoor = GameObject.Find("ExitDoor");
         if(exitDoor != null)
         {
-            exitDoor.TriggerDoorOpen();
+            exitDoor.GetComponent<ExitDoor>().TriggerDoorOpen();
         }
 
         waiting = true;

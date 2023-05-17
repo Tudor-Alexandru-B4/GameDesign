@@ -32,8 +32,8 @@ TagManager:
   - Barrel
   - Turret
   - Ground
-  - 
-  - 
+  - GroundCollider
+  - GroundColliderBoss
   - 
   - 
   - 

@@ -15,8 +15,16 @@ public class BarrelHealthSystem : MonoBehaviour, IHealthSystem
 
     public void TakeDamage(float damage)
     {
-        health--;
         spriteRenderer.color = new Color(1.5f - health/maxHealth, 0, 0, 1);
+        health--;
+    }
+
+    public void Explode()
+    {
+        spriteRenderer.color = new Color(1.5f - health / maxHealth, 0, 0, 1);
+        spriteRenderer.color = new Color(1.5f - health / maxHealth, 0, 0, 1);
+        spriteRenderer.color = new Color(1.5f - health / maxHealth, 0, 0, 1);
+        health = 0;
     }
 
     private void Update()

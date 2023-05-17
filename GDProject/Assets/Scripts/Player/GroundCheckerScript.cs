@@ -14,9 +14,22 @@ public class GroundCheckerScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Platform")
         {
-            playerMovement.jumpCounter = playerMovement.maxJumpCounter;
-            playerMovement.dashCounter = playerMovement.maxDashCounter;
+            Restore();
         }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Platform")
+        {
+            Restore();
+        }
+    }
+
+    private void Restore()
+    {
+        playerMovement.jumpCounter = playerMovement.maxJumpCounter;
+        playerMovement.dashCounter = playerMovement.maxDashCounter;
     }
 
 }

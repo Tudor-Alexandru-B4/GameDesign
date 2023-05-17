@@ -3,6 +3,7 @@ using UnityEngine;
 public class CameraScript : MonoBehaviour
 {
     public float offset;
+    public float offsetY = 0f;
     GameObject player;
 
     // Start is called before the first frame update
@@ -21,6 +22,6 @@ public class CameraScript : MonoBehaviour
         }
         var playerPos = player.transform.position;
         var newX = playerPos.x + (player.GetComponent<PlayerMovementScript>().facingRight ? -1 : 1) * offset;
-        gameObject.transform.position = new Vector3(newX, playerPos.y, gameObject.transform.position.z);
+        gameObject.transform.position = new Vector3(newX, playerPos.y + offsetY, gameObject.transform.position.z);
     }
 }

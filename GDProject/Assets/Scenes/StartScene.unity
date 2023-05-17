@@ -1559,6 +1559,8 @@ Tilemap:
   m_TileColorArray:
   - m_RefCount: 110
     m_Data: {r: 1, g: 1, b: 1, a: 1}
+  - m_RefCount: 0
+    m_Data: {r: 3.48e-41, g: 3.48e-41, b: 3.48e-41, a: 3.48e-41}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1864,6 +1866,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8680922083245664234, guid: 133b0f6c32576f3489eb7b1870a33844, type: 3}
+      propertyPath: m_Radius
+      value: 5.88
+      objectReference: {fileID: 0}
     - target: {fileID: 8680922083964184611, guid: 133b0f6c32576f3489eb7b1870a33844, type: 3}
       propertyPath: m_Name
       value: ExplosiveBarrel (1)

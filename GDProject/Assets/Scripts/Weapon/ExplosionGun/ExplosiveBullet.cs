@@ -21,24 +21,32 @@ public class ExplosiveBullet : BasicBulletScript
     {
         if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Platform")
         {
-            gameObject.GetComponent<SpriteRenderer>().enabled = false;
-            explosionRenderer.enabled = true;
-            var rb = gameObject.GetComponent<Rigidbody2D>();
-            rb.gravityScale = 0f;
-            rb.velocity = Vector3.zero;
-            StartCoroutine(Explode());
+            PrepareExplosion();
         }
     }
 
     override
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.gameObject.tag == "Enemy")
+        {
+            PrepareExplosion();
+        }
     }
 
     private IEnumerator Explode()
     {
         yield return new WaitForSeconds(explosionVisibleTime);
         explosion.GetComponent<Explosion>().Explode(damage);
+    }
+
+    private void PrepareExplosion()
+    {
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        explosionRenderer.enabled = true;
+        var rb = gameObject.GetComponent<Rigidbody2D>();
+        rb.gravityScale = 0f;
+        rb.velocity = Vector3.zero;
+        StartCoroutine(Explode());
     }
 }
