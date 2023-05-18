@@ -12,7 +12,10 @@ public class AimGunScript : MonoBehaviour
     private void Start()
     {
         player = gameObject.transform.parent.GetComponent<PlayerMovementScript>();
-        gun = gameObject.transform.GetChild(0).gameObject;
+        if(GameObject.Find("PlayerManager").GetComponent<PlayerManager>().weapon == null)
+        {
+            gun = gameObject.transform.GetChild(0).gameObject;
+        }
     }
 
     void Update()

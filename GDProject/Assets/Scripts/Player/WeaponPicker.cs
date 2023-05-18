@@ -37,6 +37,7 @@ public class WeaponPicker : MonoBehaviour
 
             GameObject oldGun = anchor.transform.GetChild(0).gameObject;
             GameObject newGun = Instantiate(weapon, anchor.transform);
+            GameObject.Find("PlayerManager").GetComponent<PlayerManager>().weapon = weapon;
             anchor.gun = newGun;
             Destroy(weaponSpawner.transform.GetChild(0).gameObject);
             weaponSpawner.SpawnWeapon(oldGun);

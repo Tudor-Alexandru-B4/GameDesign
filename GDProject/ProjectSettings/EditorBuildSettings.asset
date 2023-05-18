@@ -12,6 +12,33 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/BouncyCastle.unity
+    path: Assets/Scenes/Level_01.unity
+    guid: 64fe5c6e71d60304fb6be9c249b49f19
+  - enabled: 1
+    path: Assets/Scenes/Level_02.unity
+    guid: b31038176c8194240b7d4e6c72ebd18b
+  - enabled: 1
+    path: Assets/Scenes/Level_03.unity
+    guid: 270a7ce213526754b83ba679406913f8
+  - enabled: 1
+    path: Assets/Scenes/Level_04.unity
+    guid: 375766dd527149a44ac3f4fd0cfd6658
+  - enabled: 1
+    path: Assets/Scenes/Level_05.unity
+    guid: 12a337004f3947d42a4d945ce79849a8
+  - enabled: 1
+    path: Assets/Scenes/Level_06.unity
+    guid: cd4d0fb1f92558c46849e4cf6ff1cad9
+  - enabled: 1
+    path: Assets/Scenes/Level_07.unity
+    guid: 90bb96a6f4ba3054aa424e0a3e3aa7a5
+  - enabled: 1
+    path: Assets/Scenes/Level_09.unity
     guid: 570e866a214872546b035d6f3631f1c9
+  - enabled: 1
+    path: Assets/Scenes/BossBattleScene.unity
+    guid: f9028b36408a43e4a995abf6f41dc3a0
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: b601b1a89199d2041aa98fe33fb5a4a0
   m_configObjects: {}

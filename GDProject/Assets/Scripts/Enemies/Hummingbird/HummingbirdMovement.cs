@@ -3,9 +3,12 @@ using UnityEngine;
 
 public class HummingbirdMovement : EnemyMovement
 {
+    public Transform backdoor;
     public float rotationSpeed = 15f;
     GameObject player = null;
     Rigidbody2D rb;
+
+    bool wasStunned = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +27,13 @@ public class HummingbirdMovement : EnemyMovement
 
         if(canMove)
         {
+            if(wasStunned)
+            {
+                transform.position = backdoor.position;
+                wasStunned = false;
+            }
+            rb.constraints = RigidbodyConstraints2D.None;
+
             Vector3 diff = player.transform.position - transform.position;
             diff.Normalize();
             float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
@@ -38,6 +48,12 @@ public class HummingbirdMovement : EnemyMovement
             {
                 transform.rotation = Quaternion.Euler(180f, 0f, -(rot_z - 180));
             }
+
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
+        else
+        {
+            wasStunned = true;
         }
     }
 

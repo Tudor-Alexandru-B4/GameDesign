@@ -12,5 +12,14 @@ public class RoomStartPoint : MonoBehaviour
         {
             player.GetComponent<HealthSystemPlayer>().health = playerManager.health;
         }
+
+        if (playerManager.weapon)
+        {
+            var anchor = GameObject.Find("GunAnchorPoint").GetComponent<AimGunScript>();
+            GameObject oldGun = anchor.transform.GetChild(0).gameObject;
+            Destroy(oldGun);
+            GameObject newGun = Instantiate(playerManager.weapon, anchor.transform);
+            anchor.gun = newGun;
+        }
     }
 }
