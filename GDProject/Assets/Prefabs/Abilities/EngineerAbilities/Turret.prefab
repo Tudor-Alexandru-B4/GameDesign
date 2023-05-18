@@ -125,7 +125,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 100
+  m_Radius: 250
 --- !u!114 &913235853582503145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 913235855221688469}
   bulletPrefab: {fileID: 6754074057890592202, guid: eef9f4e195997a44abd5e37d79b239c4, type: 3}
-  attackCooldown: 0.5
+  attackCooldown: 0.25
   damage: 10
   speed: 500
   spawnTime: 0
