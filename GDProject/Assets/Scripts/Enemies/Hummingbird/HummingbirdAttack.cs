@@ -26,7 +26,7 @@ public class HummingbirdAttack : EnemyAttack
         {
             movement.canMove = false;
             canAttack = false;
-            rb.AddForce(-transform.right * attackSpeed);
+            rb.velocity = (-transform.right * attackSpeed);
         }
     }
 
