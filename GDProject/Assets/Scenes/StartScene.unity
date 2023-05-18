@@ -1746,8 +1746,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5284188724087456810, guid: 659a9c37a29699e468f04bab3d64dccf, type: 3}
+      propertyPath: showCase
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284188724087456810, guid: 659a9c37a29699e468f04bab3d64dccf, type: 3}
       propertyPath: spawnChance
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284188724087456810, guid: 659a9c37a29699e468f04bab3d64dccf, type: 3}
+      propertyPath: preferredWeapon
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5284188724087456811, guid: 659a9c37a29699e468f04bab3d64dccf, type: 3}
       propertyPath: m_RootOrder
@@ -1755,11 +1763,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5284188724087456811, guid: 659a9c37a29699e468f04bab3d64dccf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.92
+      value: -8.23
       objectReference: {fileID: 0}
     - target: {fileID: 5284188724087456811, guid: 659a9c37a29699e468f04bab3d64dccf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.83
+      value: 10.68
       objectReference: {fileID: 0}
     - target: {fileID: 5284188724087456811, guid: 659a9c37a29699e468f04bab3d64dccf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2776,7 +2784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4d61e0bdcc95594bb4151da8284a2c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: -5
+  offset: 0
   offsetY: 0
 --- !u!1 &1424687055
 GameObject:
@@ -3429,6 +3437,14 @@ PrefabInstance:
     - target: {fileID: 638764911695014659, guid: cc063f6d9375d634191de6f454e2fafd, type: 3}
       propertyPath: m_Name
       value: OneWayPlatform
+      objectReference: {fileID: 0}
+    - target: {fileID: 638764911695014684, guid: cc063f6d9375d634191de6f454e2fafd, type: 3}
+      propertyPath: layer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 638764911695014684, guid: cc063f6d9375d634191de6f454e2fafd, type: 3}
+      propertyPath: layer.m_Bits
+      value: 1048576
       objectReference: {fileID: 0}
     - target: {fileID: 638764911695014687, guid: cc063f6d9375d634191de6f454e2fafd, type: 3}
       propertyPath: m_RootOrder
