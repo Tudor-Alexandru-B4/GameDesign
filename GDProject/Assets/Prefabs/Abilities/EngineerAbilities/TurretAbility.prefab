@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8a3cf5d4607f749b419399ef402b3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  abilitySprite: {fileID: 21300000, guid: f0fa26271dc54804ebe5a745c314cf80, type: 3}
   cooldown: 35
   turret: {fileID: 913235853582503150, guid: 93ebb0e49f028a343bd12ca920964c3b, type: 3}
   turretTime: 15

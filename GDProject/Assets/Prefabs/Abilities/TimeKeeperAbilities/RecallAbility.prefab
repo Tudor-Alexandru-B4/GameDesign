@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cc139c95d3cd934f842efd9d8a901bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  abilitySprite: {fileID: 21300000, guid: bc88d3b3995c33a4fb1a29a74b0b88be, type: 3}
   cooldown: 5
-  maxEchos: 20

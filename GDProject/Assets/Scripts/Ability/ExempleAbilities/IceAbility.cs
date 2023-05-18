@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class IceAbility : AbilityScript
 {
-    public float cooldown;
     public GameObject ice;
     public float iceSpeedMiddle;
     public float iceSpeedSides;

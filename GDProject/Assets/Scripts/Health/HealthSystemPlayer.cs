@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HealthSystemPlayer : MonoBehaviour, IHealthSystem
 {
@@ -10,14 +11,17 @@ public class HealthSystemPlayer : MonoBehaviour, IHealthSystem
     public float invincibilityTime;
     bool isInvincible = false;
 
+    Slider healthBar;
     private void Start()
     {
-        maxHealth = health;
+        healthBar = GameObject.Find("HealthBar").GetComponent<Slider>();
+        healthBar.maxValue = maxHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
+        healthBar.value = health;
         if (health <= 0.0)
         {
             Destroy(GameObject.Find("PlayerManager"));

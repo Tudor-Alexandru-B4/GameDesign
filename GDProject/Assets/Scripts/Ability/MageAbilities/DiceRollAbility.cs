@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class DiceRollAbility : AbilityScript
 {
-    public float cooldown;
     public float throwSpeed;
     public float throwRotation;
     public float rollTime;

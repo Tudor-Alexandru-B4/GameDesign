@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class BallAbility : AbilityScript
 {
-    public float cooldown;
     public GameObject ball;
     public float ballSpeed;
 

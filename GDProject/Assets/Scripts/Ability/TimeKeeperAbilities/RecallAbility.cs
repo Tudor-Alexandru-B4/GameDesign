@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class RecallAbility : AbilityScript
 {
-    public float cooldown;
 
     override
     public IEnumerator UseAbility(int abilityNumber, GameObject player)

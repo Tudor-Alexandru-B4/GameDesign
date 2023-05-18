@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class PokerChipAbility : AbilityScript
 {
-    public float cooldown;
     public float throwSpeed;
     public float travelTime;
     public float travelSpeed;

@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class RocketsAbility : AbilityScript
 {
-    public float cooldown;
     public float damage;
     public GameObject rocket;
     public float rocketSpeedMiddle;

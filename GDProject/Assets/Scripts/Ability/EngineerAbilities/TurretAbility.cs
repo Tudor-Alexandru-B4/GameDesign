@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class TurretAbility : AbilityScript
 {
-    public float cooldown;
     public GameObject turret;
     public float turretTime;
 

@@ -20,9 +20,8 @@ public class EngineerTurret : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var layermask1 = 1 << 13;  // SmallPlatform
         var layermask2 = 1 << 17;  // Ground
-        mask = layermask1 | layermask2;
+        mask =layermask2;
     }
 
     // Update is called once per frame
