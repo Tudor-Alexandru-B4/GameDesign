@@ -146,4 +146,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normal: 0
   reversed: 180
-  waitTime: 0.5
+  waitTime: 0.1
+  layer: 20

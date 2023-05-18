@@ -9,6 +9,12 @@ public class PlayerManager : MonoBehaviour
 
     private void Start()
     {
+        var menuLoader = GameObject.Find("MenuLoader");
+        if(menuLoader != null)
+        {
+            replanishHealth = menuLoader.GetComponent<MenuLoader>().replanishHealth;
+        }
+        
         DontDestroyOnLoad(gameObject);
     }
 

@@ -239,6 +239,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelEnemyChecker
       objectReference: {fileID: 0}
+    - target: {fileID: 5959075936399817843, guid: 7cb8636ec61f5454a9c2cc7b80f9cc71, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cb8636ec61f5454a9c2cc7b80f9cc71, type: 3}
 --- !u!1001 &281438865
@@ -304,6 +308,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JumpingPlatform (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 318011759102404669, guid: 82c22bc2c02e51a4488258bfe5233e92, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82c22bc2c02e51a4488258bfe5233e92, type: 3}
 --- !u!1001 &290686064
@@ -360,6 +368,10 @@ PrefabInstance:
     - target: {fileID: 4520722542462129517, guid: ef305dab55ed745478f07f6d13137d5f, type: 3}
       propertyPath: m_Name
       value: Enemy_Hummingbird (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520722542462129517, guid: ef305dab55ed745478f07f6d13137d5f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef305dab55ed745478f07f6d13137d5f, type: 3}
@@ -441,6 +453,10 @@ PrefabInstance:
     - target: {fileID: 6498656061865658581, guid: dd938c2cfa37d6248ae041011f8e900a, type: 3}
       propertyPath: m_Name
       value: PortalManager (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6498656061865658581, guid: dd938c2cfa37d6248ae041011f8e900a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6498656061865658583, guid: dd938c2cfa37d6248ae041011f8e900a, type: 3}
       propertyPath: m_RootOrder
@@ -4055,6 +4071,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_Hummingbird
       objectReference: {fileID: 0}
+    - target: {fileID: 4520722542462129517, guid: ef305dab55ed745478f07f6d13137d5f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef305dab55ed745478f07f6d13137d5f, type: 3}
 --- !u!1001 &793457608
@@ -4116,6 +4136,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JumpingPlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 318011759102404669, guid: 82c22bc2c02e51a4488258bfe5233e92, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82c22bc2c02e51a4488258bfe5233e92, type: 3}
 --- !u!1001 &881047656
@@ -4172,6 +4196,10 @@ PrefabInstance:
     - target: {fileID: 7070053898812570415, guid: 3fb8dd38c24beb7418c36ae6a524da79, type: 3}
       propertyPath: m_Name
       value: RoomStartPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 7070053898812570415, guid: 3fb8dd38c24beb7418c36ae6a524da79, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fb8dd38c24beb7418c36ae6a524da79, type: 3}
@@ -4238,6 +4266,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JumpingPlatform (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 318011759102404669, guid: 82c22bc2c02e51a4488258bfe5233e92, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82c22bc2c02e51a4488258bfe5233e92, type: 3}
 --- !u!1001 &917517966
@@ -4299,6 +4331,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JumpingPlatform (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 318011759102404669, guid: 82c22bc2c02e51a4488258bfe5233e92, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82c22bc2c02e51a4488258bfe5233e92, type: 3}
 --- !u!1001 &1134186425
@@ -4355,6 +4391,10 @@ PrefabInstance:
     - target: {fileID: 5284188724087456813, guid: 659a9c37a29699e468f04bab3d64dccf, type: 3}
       propertyPath: m_Name
       value: WeaponSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284188724087456813, guid: 659a9c37a29699e468f04bab3d64dccf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 659a9c37a29699e468f04bab3d64dccf, type: 3}
@@ -4420,6 +4460,10 @@ PrefabInstance:
     - target: {fileID: 318011759102404669, guid: 82c22bc2c02e51a4488258bfe5233e92, type: 3}
       propertyPath: m_Name
       value: JumpingPlatform (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 318011759102404669, guid: 82c22bc2c02e51a4488258bfe5233e92, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82c22bc2c02e51a4488258bfe5233e92, type: 3}
@@ -4490,6 +4534,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExitDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 5832516717820563731, guid: fbd0df67d1cf32342b53923d2198cda8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbd0df67d1cf32342b53923d2198cda8, type: 3}
 --- !u!1001 &1339663885
@@ -4550,6 +4598,10 @@ PrefabInstance:
     - target: {fileID: 4520722542462129517, guid: ef305dab55ed745478f07f6d13137d5f, type: 3}
       propertyPath: m_Name
       value: Enemy_Hummingbird (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520722542462129517, guid: ef305dab55ed745478f07f6d13137d5f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef305dab55ed745478f07f6d13137d5f, type: 3}
@@ -4616,6 +4668,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JumpingPlatform (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 318011759102404669, guid: 82c22bc2c02e51a4488258bfe5233e92, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82c22bc2c02e51a4488258bfe5233e92, type: 3}
 --- !u!1001 &1724998370
@@ -4676,6 +4732,10 @@ PrefabInstance:
     - target: {fileID: 4520722542462129517, guid: ef305dab55ed745478f07f6d13137d5f, type: 3}
       propertyPath: m_Name
       value: Enemy_Hummingbird (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520722542462129517, guid: ef305dab55ed745478f07f6d13137d5f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef305dab55ed745478f07f6d13137d5f, type: 3}
@@ -4741,6 +4801,10 @@ PrefabInstance:
     - target: {fileID: 318011759102404669, guid: 82c22bc2c02e51a4488258bfe5233e92, type: 3}
       propertyPath: m_Name
       value: JumpingPlatform (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 318011759102404669, guid: 82c22bc2c02e51a4488258bfe5233e92, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82c22bc2c02e51a4488258bfe5233e92, type: 3}
@@ -4842,6 +4906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 0
+  offsetY: 0
 --- !u!1001 &1764625599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4900,6 +4965,10 @@ PrefabInstance:
     - target: {fileID: 4520722542462129517, guid: ef305dab55ed745478f07f6d13137d5f, type: 3}
       propertyPath: m_Name
       value: Enemy_Hummingbird (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520722542462129517, guid: ef305dab55ed745478f07f6d13137d5f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef305dab55ed745478f07f6d13137d5f, type: 3}
@@ -4981,6 +5050,10 @@ PrefabInstance:
     - target: {fileID: 6498656061865658581, guid: dd938c2cfa37d6248ae041011f8e900a, type: 3}
       propertyPath: m_Name
       value: PortalManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6498656061865658581, guid: dd938c2cfa37d6248ae041011f8e900a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6498656061865658583, guid: dd938c2cfa37d6248ae041011f8e900a, type: 3}
       propertyPath: m_RootOrder
