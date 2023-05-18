@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class TimeStopAbility : AbilityScript
 {
-    public float cooldown;
     public float timeStopDuration;
     TimeStopRange timeStopRange;
 

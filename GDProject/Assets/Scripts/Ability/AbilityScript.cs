@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class AbilityScript : MonoBehaviour
 {
+    public Sprite abilitySprite;
+    public float cooldown;
+
     public virtual IEnumerator UseAbility(int abilityNumber, GameObject player)
     {
         yield return new WaitForSecondsRealtime(0f);

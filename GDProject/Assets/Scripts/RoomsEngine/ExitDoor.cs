@@ -29,6 +29,8 @@ public class ExitDoor : MonoBehaviour
         {
             if (Input.GetButton("HoldDown"))
             {
+                GameObject.Find("PlayerManager").GetComponent<PlayerManager>().health = collision.GetComponent<HealthSystemPlayer>().health;
+                GameObject.Find("PlayerManager").GetComponent<PlayerManager>().roomNumber++;
                 roomFinished = false;
                 int index = Random.Range(1, SceneManager.sceneCountInBuildSettings);
                 string path = SceneUtility.GetScenePathByBuildIndex(index);

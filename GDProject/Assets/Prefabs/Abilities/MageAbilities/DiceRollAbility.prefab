@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0fe7101d8e42c4b905b7a53f3400b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  abilitySprite: {fileID: 21300000, guid: ec85b0c9d6d490949aefa2cc4a5f3f71, type: 3}
   cooldown: 0
   throwSpeed: 500
   throwRotation: 5
