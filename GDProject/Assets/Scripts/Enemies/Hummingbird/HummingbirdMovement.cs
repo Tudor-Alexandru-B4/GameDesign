@@ -19,6 +19,8 @@ public class HummingbirdMovement : EnemyMovement
     // Update is called once per frame
     void Update()
     {
+        base.Update();
+
         if(player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player");

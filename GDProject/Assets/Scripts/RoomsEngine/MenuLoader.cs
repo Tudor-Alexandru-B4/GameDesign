@@ -31,7 +31,10 @@ public class MenuLoader : MonoBehaviour
 
     public void RemoveLevel()
     {
-        levelsTillBoss--;
+        if(levelsTillBoss > 1)
+        {
+            levelsTillBoss--;
+        }
         counterText.text = levelsTillBoss.ToString();
     }
 }

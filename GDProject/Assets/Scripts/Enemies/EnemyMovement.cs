@@ -1,11 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
     public bool facingRight = true;
     public bool canMove = true;
+
+    float movingCooldown = 0f;
+    bool wasStunnedAlready = false;
 
     public void Flip()
     {
@@ -16,19 +17,30 @@ public class EnemyMovement : MonoBehaviour
 
     public virtual void StopCorutines() { }
 
-    public void Stun(float stunTime)
+    public void Update()
     {
-        if (canMove)
+        if (movingCooldown >= 0)
         {
-            gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            StartCoroutine(Stunned(stunTime));
+            movingCooldown -= Time.deltaTime;
+            wasStunnedAlready = true;
+        }
+        else
+        {
+            if (wasStunnedAlready)
+            {
+                canMove = true;
+                wasStunnedAlready = false;
+            }
         }
     }
 
-    IEnumerator Stunned(float stunnTime)
+    public void Stun(float stunTime)
     {
-        canMove = false;
-        yield return new WaitForSeconds(stunnTime);
-        canMove = true;
+        gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        if (stunTime > movingCooldown)
+        {
+            movingCooldown = stunTime;
+            canMove = false;
+        }
     }
 }

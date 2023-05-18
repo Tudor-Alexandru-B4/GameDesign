@@ -20,6 +20,8 @@ public class BossMovement : EnemyMovement
 
     private void Update()
     {
+        base.Update();
+
         if (!canMove)
         {
             rb.velocity = Vector2.zero;

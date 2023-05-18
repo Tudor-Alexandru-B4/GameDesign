@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilitySprite: {fileID: 21300000, guid: 0021827d77e91f44f94c8825023a50a1, type: 3}
-  cooldown: 50
+  cooldown: 20
   timeStopDuration: 5

@@ -22,6 +22,8 @@ public class HummingbirdAttack : EnemyAttack
     // Update is called once per frame
     void Update()
     {
+        base.Update();
+
         if (canAttack)
         {
             movement.canMove = false;
