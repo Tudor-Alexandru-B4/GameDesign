@@ -1272,7 +1272,12 @@ MonoBehaviour:
   - Level_03
   - Level_04
   - Level_05
+  - Level_06
+  - Level_07
+  - Level_09
   roomNumber: 0
+  roomsUntilBoss: 5
   replanishHealth: 1
   character: {fileID: 0}
+  weapon: {fileID: 0}
   health: 0

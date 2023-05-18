@@ -38,7 +38,6 @@ public class ExitDoor : MonoBehaviour
             if (Input.GetButton("HoldDown"))
             {
                 GameObject.Find("PlayerManager").GetComponent<PlayerManager>().health = collision.GetComponent<HealthSystemPlayer>().health;
-                GameObject.Find("PlayerManager").GetComponent<PlayerManager>().roomNumber++;
                 FinishSequence();
             }
         }
@@ -48,6 +47,19 @@ public class ExitDoor : MonoBehaviour
     {
         roomFinished = false;
         var playerManager = GameObject.Find("PlayerManager").GetComponent<PlayerManager>();
+        playerManager.roomNumber++;
+        if (playerManager.roomNumber == playerManager.roomsUntilBoss)
+        {
+            SceneManager.LoadScene("BossBattleScene");
+            return;
+        }
+
+        if (playerManager.roomNumber > playerManager.roomsUntilBoss)
+        {
+            SceneManager.LoadScene("EndScene");
+            return;
+        }
+
         var index = Random.Range(0, playerManager.scenes.Count);
         SceneManager.LoadScene(playerManager.scenes[index]);
 

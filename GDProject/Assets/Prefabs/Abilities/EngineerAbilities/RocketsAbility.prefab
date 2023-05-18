@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilitySprite: {fileID: 21300000, guid: 74c7117c6c030a34297422145df39195, type: 3}
   cooldown: 1
-  damage: 0
+  damage: 20
   rocket: {fileID: 2581346705985576375, guid: 801532a3928d19143a1e53afe51e3f0a, type: 3}
   rocketSpeedMiddle: 35
   rocketSpeedSides: 25

@@ -111,14 +111,14 @@ public class Missle : MonoBehaviour
             {
                 enemies.Remove(currentTarget);
             }
-            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            //GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             currentTarget = null;
             return;
         }
         else if (!HasClearSight(currentTarget))
         {
             currentTarget = null;
-            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            //GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             return;
         }
         var enemyPosition = currentTarget.transform.position;
