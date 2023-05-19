@@ -11,6 +11,9 @@ public class ExplosiveBullet : BasicBulletScript
     private void Start()
     {
         explosion = Instantiate(explosionPrefab, gameObject.transform);
+        transform.DetachChildren();
+        explosion.GetComponent<FollowingScript>().toFollow = gameObject;
+        explosion.GetComponent<Explosion>().specialParent = gameObject;
         explosion.transform.localPosition = Vector3.zero;
         explosionRenderer = explosion.GetComponent<SpriteRenderer>();
         explosionRenderer.enabled = false;
@@ -19,7 +22,7 @@ public class ExplosiveBullet : BasicBulletScript
     override
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Platform")
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Player")
         {
             PrepareExplosion();
         }

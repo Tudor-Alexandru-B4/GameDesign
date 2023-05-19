@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
+    public GameObject specialParent = null;
+
     List<IHealthSystem> healthSystems = new List<IHealthSystem>();
     List<GameObject> barrels = new List<GameObject>();
 
@@ -68,6 +70,14 @@ public class Explosion : MonoBehaviour
             }
         }
 
-        Destroy(gameObject.transform.parent.gameObject);
+        if(specialParent != null)
+        {
+            Destroy(specialParent.gameObject);
+            Destroy(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject.transform.parent.gameObject);
+        }
     }
 }
